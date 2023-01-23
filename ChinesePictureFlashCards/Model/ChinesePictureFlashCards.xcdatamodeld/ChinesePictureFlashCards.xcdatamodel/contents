@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Deck" representedClassName="Deck" syncable="YES" codeGenerationType="class">
+        <attribute name="deckType" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="words" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Word" inverseName="deck" inverseEntity="Word"/>
+    </entity>
+    <entity name="Word" representedClassName="Word" syncable="YES" codeGenerationType="class">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="chinese" optional="YES" attributeType="String"/>
+        <attribute name="english" optional="YES" attributeType="String"/>
+        <attribute name="picture" optional="YES" attributeType="String"/>
+        <attribute name="pronunciation" optional="YES" attributeType="String"/>
+        <relationship name="deck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="words" inverseEntity="Deck"/>
+    </entity>
+    <elements>
+        <element name="Deck" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Word" positionX="152.7118530273438" positionY="82.9351806640625" width="128" height="133"/>
+    </elements>
+</model>
